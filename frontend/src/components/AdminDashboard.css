@@ -1,0 +1,192 @@
+/* ======== MAIN WRAPPER ======== */
+.admin-dashboard {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ======== SIDEBAR ======== */
+.sidebar {
+  width: 18vw;
+  height: 100vh;
+  background: #1e293b;
+  color: white;
+  padding: 2vh 1vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Title */
+.sidebar h1 {
+  text-align: center;
+  font-size: 1.6vw;
+  margin-bottom: 3vh;
+}
+
+/* Navigation */
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.nav-link {
+  padding: 1.5vh 1vw;
+  font-size: 1vw;
+  background: #486081;
+  color: white;
+  border: none;
+  border-radius: 0.6vw;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.nav-link:hover {
+  background: #475569;
+}
+
+.nav-link.active {
+  background: #8b6464;
+}
+
+/* Bottom profile section */
+.sidebar-bottom {
+  padding-top: 3vh;
+}
+
+.profile-card {
+  background: #22c55e;
+  padding: 2vh 1vw;
+  border-radius: 0.8vw;
+  margin-bottom: 2vh;
+  text-align: left;
+}
+
+.profile-card .admin-name {
+  font-size: 1.2vw;
+  font-weight: bold;
+}
+
+.profile-card .email,
+.profile-card .role {
+  font-size: 0.9vw;
+  opacity: 0.9;
+  margin-top: 0.5vh;
+}
+
+/* Logout */
+.logout-btn {
+  width: 100vw;
+  padding: 1.5vh;
+  background: #ef4444;
+  border: none;
+  border-radius: 0.6vw;
+  font-size: 1vw;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: #c43030;
+}
+
+/* ======== MAIN CONTENT ======== */
+.dashboard-main {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  background: #7a97c2;
+  padding: 4vh 6vw;
+  box-sizing: border-box;
+}
+
+/* ======== PAGE CONTAINER ======== */
+.page-container {
+  width: 50%;
+  background: #5c81a5;
+  padding: 3vh 3vw;
+  border-radius: 1vw;
+  box-sizing: border-box;
+}
+
+/* Heading */
+.page-container h2 {
+  text-align: center;
+  font-size: 2vw;
+  margin-bottom: 3vh;
+}
+
+/* ======== TABLE ======== */
+.customers-table {
+  width: 10%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 0.8vw;
+  overflow: hidden;
+}
+
+.customers-table th,
+.customers-table td {
+  padding: 1.6vh 1vw;
+  font-size: 1vw;
+  border-bottom: 1px solid #d0d7e2;
+}
+
+.customers-table th {
+  background: #dce4ee;
+  font-size: 1.2vw;
+  font-weight: 600;
+}
+
+.customers-table tr:nth-child(even) {
+  background: #eef4fa;
+}
+
+/* Delete Button */
+.delete-btn {
+  background: #ef4444;
+  color: white;
+  padding: 0.8vh 1.5vw;
+  font-size: 1vw;
+  border: none;
+  border-radius: 0.5vw;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  background: #c43030;
+}
+
+/* ======== FORM ======== */
+.page-container input,
+.page-container textarea {
+  width: 100%;
+  padding: 1.2vh 1vw;
+  margin-bottom: 2vh;
+  font-size: 1vw;
+  border-radius: 0.6vw;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.page-container button {
+  padding: 1.4vh;
+  font-size: 1vw;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 0.6vw;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.page-container button:hover {
+  background: #1e4db7;
+}

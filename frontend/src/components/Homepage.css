@@ -1,0 +1,290 @@
+/* ------------ GLOBAL RESET ------------ */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ------------ HOMEPAGE BASE (WHITE BG) ------------ */
+.homepage {
+  display: flex;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+
+  /* ✅ Background changed to white */
+  background: #ffffff;
+
+  /* Original animation kept (logic unchanged) */
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  position: fixed;
+  overflow: hidden;
+
+  /* Text color changed to dark red so visible on white */
+  color: #8B0000;
+}
+
+/* Gradient Animation (kept, but not visible due to white BG) */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ------------ HERO TEXT ------------ */
+.title, .hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  color: #8B0000; /* Dark blood red */
+}
+
+.subtitle, .hero-subtitle {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  text-align: center;
+  color: #C62828; /* Softer medical red */
+  text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* ------------ MAIN BUTTONS ------------ */
+.main-btn, .homepage-buttons button {
+  padding: 12px 22px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  
+  /* Donation button color updated */
+  background: #B71C1C;
+  color: white;
+  box-shadow: 0 4px 10px rgba(183,28,28,0.25);
+}
+
+.main-btn:hover, .homepage-buttons button:hover {
+  background: #8B0000;
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(139,0,0,0.35);
+}
+
+/* ------------ POPUP OVERLAY ------------ */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(80,0,0,0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* ------------ POPUP CARD ------------ */
+.popup-card {
+  background: #FFEBEE;
+  padding: 25px;
+  width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(80,0,0,0.25);
+  position: relative;
+  text-align: center;
+  animation: popup 0.3s ease-in-out;
+}
+
+.popup-card h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #8B0000;
+}
+
+/* Inputs */
+.popup-card input, .popup-card select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #E57373;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  background: #fff;
+  color: #4A0000;
+  transition: 0.3s;
+}
+
+.popup-card input:focus, .popup-card select:focus {
+  outline: none;
+  border-color: #B71C1C;
+  box-shadow: 0 0 6px rgba(183,28,28,0.35);
+}
+
+/* Dropdown icon arrow color changed to red */
+.popup-card select {
+  appearance: none;
+  background: #fff url("data:image/svg+xml;utf8,<svg fill='%23B71C1C' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 12px center;
+  background-size: 16px;
+  cursor: pointer;
+}
+
+/* Password eye */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.password-input {
+  width: 100%;
+  padding: 12px 40px 12px 12px;
+  border: 1px solid #E57373;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  color: #4A0000;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #B71C1C;
+}
+.eye-icon:hover {
+  color: #8B0000;
+}
+
+/* Button row */
+.btn-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: #B71C1C;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.login-btn:hover {
+  background: #641E16;
+  transform: scale(1.03);
+}
+
+.btn-row .signup-btn {
+  background: #C62828;
+}
+.btn-row .signup-btn:hover {
+  background: #8B0000;
+  transform: scale(1.03);
+}
+
+/* Switch text */
+.switch-text {
+  margin-top: 15px;
+  font-size: 0.95rem;
+}
+
+.switch-btn {
+  background: none;
+  border: none;
+  color: #B71C1C;
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: 500;
+}
+.switch-btn:hover {
+  color: #8B0000;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #B71C1C;
+}
+
+/* Popup animation */
+@keyframes popup {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* ------------ FLOATING BLOOD/BANK ICONS ------------ */
+.floating-icons span {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.85;
+  animation: float 6s infinite ease-in-out;
+}
+
+/* ✅ Only blood/medical symbols added */
+.floating-icons span:nth-child(1)::after { content: "🩸"; }
+.floating-icons span:nth-child(2)::after { content: "❤️"; }
+.floating-icons span:nth-child(3)::after { content: "💉"; }
+.floating-icons span:nth-child(4)::after { content: "🧪"; }
+.floating-icons span:nth-child(5)::after { content: "🏥"; }
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(6deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* ------------ SCROLLING BLOOD BANK MESSAGE ------------ */
+.scrolling-names {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* ✅ Updated scrolling message with only blood system theme */
+.scrolling-names span {
+  display: inline-block;
+  padding-right: 80px;
+  font-size: 1.2rem;
+  animation: scrollLeft 15s linear infinite;
+  font-weight: 600;
+  color: #C62828;
+}
+
+.scrolling-names span::after {
+  content: " 🩸 Blood Bank System | ❤️ Save Patients | 💉 Donate Blood | 🧪 Store Blood Safely | 🏥 Emergency Help Available ";
+}
+
+@keyframes scrollLeft {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
