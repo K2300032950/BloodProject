@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./CustomerDashboard.css";
 
-const API_URL = "http://localhost:5000/api/art";
-const CART_URL = "http://localhost:5000/api/cart";
+const API_URL = "http://localhost:30025/api/art";
+const CART_URL = "http://localhost:30025/api/cart";
 
 const CustomerDashboard = () => {
   const [activeSection, setActiveSection] = useState("posts");
