@@ -32,7 +32,7 @@ jobs:
           context: ./ART_GALLERY_BACKEND
           file: ./ART_GALLERY_BACKEND/backend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/review-backend1:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/backimage:latest
 
       # Step 5 — Build & Push Frontend Image
       - name: Build and Push Frontend Image
@@ -41,4 +41,4 @@ jobs:
           context: ./frontend
           file: ./frontend/frontend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/review-frontend1:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/frontimage:latest
